@@ -29,12 +29,16 @@ import com.springmvc.domain.Book;
 import com.springmvc.exception.BookIdException;
 import com.springmvc.exception.CategoryException;
 import com.springmvc.service.BookService;
+import com.springmvc.validator.UnitsInStockValidator;
 
 @Controller
 @RequestMapping("/books")
 public class BookController {
 	@Autowired
 	private BookService bookService;
+	
+	@Autowired
+	private UnitsInStockValidator unitsInStockValidator;
 	
 	@GetMapping
 	public String requestBookList(Model model) {
@@ -86,9 +90,9 @@ public class BookController {
 	
 	@PostMapping("/add")
 	public String submitAddNewBook(@Valid @ModelAttribute("NewBook") Book book, BindingResult result) {
-		if (result.hasErrors())
+		if (result.hasErrors()) {
 			return "addBook";
-
+		}
 		MultipartFile bookImage = book.getBookImage();
 		String saveName = bookImage.getOriginalFilename();
 		File saveFile = new File("C:\\upload", saveName);
@@ -112,8 +116,9 @@ public class BookController {
 	
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
-		binder.setAllowedFields("bookId", "unitPrice", "author", "description", "publisher", "category", "unitsInstock", "totalPages", "releaseDate", "condition", "bookImage");
-		
+		binder.setValidator(unitsInStockValidator);
+		binder.setAllowedFields("bookId", "name", "unitPrice", "author", "description", " publisher", "category",
+		"unitsInStock", "totalPages", "releaseDate", "condition", "bookImage");
 	}
 	
 	@ExceptionHandler(value = {BookIdException.class})

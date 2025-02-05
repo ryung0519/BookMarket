@@ -23,6 +23,9 @@ public class BookIdValidator implements ConstraintValidator<BookId, String>{
 		try {
 			book = bookService.getBookById(value);
 		}catch (BookIdException e) {
+			return true;
+		}
+		if( book !=null) {
 			return false;
 		}
 		return true;
