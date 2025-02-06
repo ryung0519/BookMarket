@@ -100,6 +100,7 @@ public class BookController {
 		if(bookImage != null && !bookImage.isEmpty()) {
 			try {
 				bookImage.transferTo(saveFile);
+				book.setFileName(saveName);
 			}catch(Exception e) {
 				throw new RuntimeException("도서 이미지가 업로드 되었습니다.", e);
 			}

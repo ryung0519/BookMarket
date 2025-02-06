@@ -12,7 +12,7 @@
 		<org.springframework-version>5.3.19</org.springframework-version>
 		<org.aspectj-version>1.9.9.1</org.aspectj-version>
 		<org.slf4j-version>1.7.36</org.slf4j-version>
-		<security.version>5.6.3</security.version>
+		<security-version>5.6.3</security-version>
 		<commons-fileupload-version>1.4</commons-fileupload-version>
         <commons-io-version>2.11.0</commons-io-version>
         <org.apache.tiles-version>3.0.8</org.apache.tiles-version>
@@ -55,12 +55,17 @@
         <dependency>
         	<groupId>org.springframework.security</groupId>
         	<artifactId>spring-security-web</artifactId>
-        	<version>${security.version}</version>
+        	<version>${security-version}</version>
     	</dependency>
     	<dependency>
         	<groupId>org.springframework.security</groupId>
         	<artifactId>spring-security-config</artifactId>
-        	<version>${security.version}</version>
+        	<version>${security-version}</version>
+    	</dependency>
+    	<dependency>
+        	 <groupId>org.springframework.security</groupId>
+    		<artifactId>spring-security-taglibs</artifactId>
+    		<version>${security-version}</version>
     	</dependency>
     
      	<!-- File Upload -->
@@ -191,6 +196,25 @@
 			<artifactId>tiles-extras</artifactId>
 			<version>${org.apache.tiles-version}</version>
 		</dependency>  
+		
+		<!-- MySQL -->
+		<dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${org.springframework-version}</version>
+    	</dependency>
+    	<dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-dbcp2</artifactId>
+            <version>2.9.0</version>
+    	</dependency>
+
+   	 	<dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.29</version>
+    	</dependency>
+    
 	</dependencies>
     <build>
         <plugins>

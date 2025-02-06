@@ -27,13 +27,10 @@
 				<div class="col-md-4">
 					<c:choose>
 						<c:when test="${book.getBookImage() == null}">
-							<img src="<c:url value="C:\\upload\\${book.getBookId()}.jpg"/>"
-								style="width: 60%" />
+							 <img src="<c:url value="C:\\upload\\${book.fileName}"/>" style="width: 60%"/>
 						</c:when>
 						<c:otherwise>
-							<img
-								src="<c:url value="C:\\upload\\${book.getBookImage().getOriginalFilename()}"/>"
-								style="width: 60%" />
+							 <img src="<c:url value="C:\\upload\\${book.fileName}"/>" style="width: 60%"/>
 						</c:otherwise>
 					</c:choose>
 					<h3>${book.name}</h3>

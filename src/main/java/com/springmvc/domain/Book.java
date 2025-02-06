@@ -35,6 +35,7 @@ public class Book implements Serializable{
 	private String releaseDate;
 	private String condition;
 	private MultipartFile bookImage;
+	private String fileName;
 	
 	public Book() {
 		super();
@@ -134,6 +135,14 @@ public class Book implements Serializable{
 
 	public void setBookImage(MultipartFile bookImage) {
 		this.bookImage = bookImage;
+	}
+
+	public String getFileName() {
+		return fileName;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
 	}
 	
 	

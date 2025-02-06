@@ -9,7 +9,7 @@
 <title>도서 등록</title>
 </head>
 <body>
-    <%-- <nav class="navbar navbar-expand  navbar-dark bg-dark">
+ <!--     <nav class="navbar navbar-expand  navbar-dark bg-dark">
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="./home">Home</a>
@@ -23,13 +23,14 @@
             </h1>
         </div>
     </div>
- --%>
+-->
     <div class="container">
-      <div class="float-right">
+   <!--     <div class="float-right">
         <form:form action="${pageContext.request.contextPath}/logout" method="POST"> 
             <input type="submit" class="btn btn-sm btn-success" value="Logout" />
         </form:form>  
     </div>
+    -->
     <div class="float-right" style="padding-right:30px">  
             <a href="?language=ko" >Korean</a>|<a href="?language=en">English</a>
     </div>  
@@ -154,10 +155,11 @@
         </div>
         </fieldset>
         </form:form>  
-        <!-- <hr>
+<!--          <hr>
     <footer>
         <p>&copy; BookMarket</p>
-    </footer> -->
+    </footer>
+ -->   
     </div>
 </body>
 </html>
