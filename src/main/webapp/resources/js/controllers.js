@@ -14,3 +14,7 @@ function clearCart(){
 	document.clearForm.submit();
 	window.location.reload();
 }
+function deleteConfirm(id){
+	if (confirm("삭제합니다!!") == true) location.href = "./delete?id=" + id;
+	else return;
+}

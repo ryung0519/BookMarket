@@ -115,4 +115,22 @@ public class BookRepositoryImpl implements BookRepository {
 		template.update(SQL, book.getBookId(), book.getName(), book.getUnitPrice(), book.getAuthor(), book.getDescription(), book.getPublisher(), book.getCategory(), book.getUnitsInStock(), book.getReleaseDate(), book.getCondition(), book.getFileName());
     	listOfBooks.add(book);
     }
+
+	@Override
+	public void setUpdateBook(Book book) {
+		if(book.getFileName() != null ) {
+			String SQL = "UPDATE Book SET b_name = ? , b_unitPrice = ? , b_author = ? , b_description = ? , b_publisher = ? , b_category = ? , b_unitsInStock = ? , b_releaseDate = ? , b_condition = ? , b_fileName = ? where b_bookId = ? ";
+			template.update(SQL, book.getName(), book.getUnitPrice(), book.getAuthor(), book.getDescription(), book.getPublisher(), book.getCategory(), book.getUnitsInStock(), book.getReleaseDate(), book.getCondition(), book.getFileName(), book.getBookId());
+		}else if(book.getFileName() == null) {
+			String SQL = "UPDATE Book SET b_name = ? , b_unitPrice = ? , b_author = ? , b_description = ? , b_publisher = ? , b_category = ? , b_unitsInStock = ? , b_releaseDate = ? , b_condition = ?  where b_bookId = ? ";
+			template.update(SQL, book.getName(), book.getUnitPrice(), book.getAuthor(), book.getDescription(), book.getPublisher(), book.getCategory(), book.getUnitsInStock(), book.getReleaseDate(), book.getCondition(), book.getBookId());
+		}
+		
+	}
+
+	@Override
+	public void setDeletBook(String bookID) {
+		String SQL = "DELETE from Book where b_bookId = ? ";
+		this.template.update(SQL, bookID);
+	}
 }

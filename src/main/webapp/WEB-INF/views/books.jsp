@@ -41,6 +41,7 @@
 					<p>
 						<a href="<c:url value="/books/book?id=${book.bookId}"/>"
 							class="btn btn-Secondary" role="button">상세정보 &raquo;</a>
+							
 				</div>
 			</c:forEach>
 		</div>
