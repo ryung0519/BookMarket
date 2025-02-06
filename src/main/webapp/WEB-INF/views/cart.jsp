@@ -10,7 +10,7 @@
 <script src="<c:url value="/resources/js/controllers.js"/>"></script>
 </head>
 <body>
-	<nav class="navbar navbar-expand  navbar-dark bg-dark">
+	<!-- <nav class="navbar navbar-expand  navbar-dark bg-dark">
 		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="../">Home</a>
@@ -21,7 +21,7 @@
 		<div class="container">
 			<h1 class="display-3">장바구니</h1>
 		</div>
-	</div>
+	</div> -->
 	<div class="container">
 		<div>
 			<form:form name="clearForm" method="delete">
@@ -62,10 +62,10 @@
 			<a href="<c:url value="/books" />" class="btn btn-secondary">
 				&laquo; 쇼핑 계속하기</a>
 		</div>
-		<hr>
+		<!-- <hr>
 		<footer>
 			<p>&copy; BookMarket</p>
-		</footer>
+		</footer> -->
 	</div>
 </body>
 </html>

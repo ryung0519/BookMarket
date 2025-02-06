@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand  navbar-dark bg-dark">
+<!-- <nav class="navbar navbar-expand  navbar-dark bg-dark">
 	<div class="container">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="./home">Home</a>
@@ -19,7 +19,7 @@
 	<div class="container">
 		<h1 class="display-3">주문취소</h1>
    </div>
-</div>		
+</div>		 -->
 <div class="container" >
    <h2 class="alert alert-danger">주문을 취소하였습니다.</h2>
 </div>

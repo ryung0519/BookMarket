@@ -9,7 +9,7 @@
 <title>Order</title>
 </head>
 <body>
-<nav class="navbar navbar-expand  navbar-dark bg-dark">
+<!-- <nav class="navbar navbar-expand  navbar-dark bg-dark">
 		<div class="container">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="./home">Home</a>
@@ -20,9 +20,9 @@
 		<div class="container">
 			<h1 class="display-3">주문정보</h1>
    </div>
-</div>
-<div class="container" >
+</div> -->
 
+<div class="container" >
     <form:form modelAttribute="order" class="form-horizontal">
     <div class="well col-md-9 col-md-offset-2" style="background:#fafafe; padding: 20px">
        <div class="text-center">

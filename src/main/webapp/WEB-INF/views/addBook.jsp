@@ -9,7 +9,7 @@
 <title>도서 등록</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand  navbar-dark bg-dark">
+    <%-- <nav class="navbar navbar-expand  navbar-dark bg-dark">
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="./home">Home</a>
@@ -23,7 +23,7 @@
             </h1>
         </div>
     </div>
-
+ --%>
     <div class="container">
       <div class="float-right">
         <form:form action="${pageContext.request.contextPath}/logout" method="POST"> 
@@ -154,10 +154,10 @@
         </div>
         </fieldset>
         </form:form>  
-        <hr>
+        <!-- <hr>
     <footer>
         <p>&copy; BookMarket</p>
-    </footer>
+    </footer> -->
     </div>
 </body>
 </html>
